@@ -1,0 +1,6 @@
+{
+  "name": "Iris Takessian — Assistante & Portfolio",
+  "description": "Portfolio interactif et assistante vocale temps réel d'Iris Takessian, étudiante en marketing, communication, production et événementiel en recherche de CDI.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

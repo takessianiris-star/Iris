@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: "Bricolage Grotesque", sans-serif;
+  --font-script: "Cormorant Garamond", Georgia, serif;
+
+  --color-canvas: #faf8f6;
+  --color-ink: #1a1720;
+  --color-ink-muted: #5a5363;
+  --color-accent: #4c38b8;
+  --color-accent-hover: #3b2a99;
+  --color-pastel-rose: #fcf0f3;
+  --color-pastel-lavender: #f3f0fc;
+  --color-pastel-butter: #fdf8ec;
+  --color-pastel-sage: #eff7f3;
+  --color-hairline: #e8e2dc;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background-color: #e6dfff;
+    color: #1a1720;
+  }
+}
+
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 34s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-marquee {
+    animation: none;
+  }
+}
